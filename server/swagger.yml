@@ -1,0 +1,31 @@
+swagger: "2.0"
+info:
+  description: Api server for LandTech test
+  version: "1.0.0"
+  title: LandTech test
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+paths:
+  /sold-properties:
+    get:
+      operationId: "sold-properties.read"
+      summary: "The sold properties data"
+      description: "Read the list of sold properties"
+      responses:
+        200:
+          description: "Successful read of sold properties"
+          schema:
+            type: "array"
+            items:
+              properties:
+                x:
+                  type: "number"
+                y:
+                  type: "number"
+                price:
+                  type: "number"
